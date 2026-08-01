@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-CACHE_PATH = ".tmp/contracts_cache.csv"
-LGAS_PATH = ".tmp/nsw_lgas.csv"
+DATA_PATH = "data/contracts_cache.csv"
+TMP_PATH = ".tmp/contracts_cache.csv"
 
 st.set_page_config(
     page_title="NSW Council Waste & Recycling Contracts Register",
@@ -41,8 +41,10 @@ st.markdown("""
 
 @st.cache_data(ttl=60)
 def load_data():
-    if os.path.exists(CACHE_PATH):
-        df = pd.read_csv(CACHE_PATH)
+    target = DATA_PATH if os.path.exists(DATA_PATH) else (TMP_PATH if os.path.exists(TMP_PATH) else None)
+    if target:
+        df = pd.read_csv(target)
+
         df["Contract Start Date"] = pd.to_datetime(df["Contract Start Date"], errors="coerce")
         df["Contract End Date"] = pd.to_datetime(df["Contract End Date"], errors="coerce")
         df["Total Contract Value ($)"] = pd.to_numeric(df["Total Contract Value ($)"], errors="coerce").fillna(0)

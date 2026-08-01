@@ -11,8 +11,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 CONFIG_PATH = "config.yaml"
-CACHE_PATH = ".tmp/contracts_cache.csv"
-LGAS_CSV_PATH = ".tmp/nsw_lgas.csv"
+CACHE_PATH = "data/contracts_cache.csv"
+LGAS_CSV_PATH = "data/nsw_lgas.csv"
+
 
 FIELDNAMES = [
     "Contract ID",
@@ -219,10 +220,12 @@ KNOWN_COUNCIL_CONTRACTS = {
 }
 
 def save_master_lgas():
+    os.makedirs("data", exist_ok=True)
     os.makedirs(".tmp", exist_ok=True)
     df_lgas = pd.DataFrame(NSW_LGAS)
     df_lgas.to_csv(LGAS_CSV_PATH, index=False)
     print(f"[SUCCESS] Exported {len(df_lgas)} NSW LGAs to {LGAS_CSV_PATH}")
+
 
 def calculate_unique_gate_fee(name, stream_type, region):
     """Calculates a unique, realistic gate fee ($/tonne) specific to this LGA & contract stream."""
