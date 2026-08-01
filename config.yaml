@@ -1,0 +1,9 @@
+target_urls:
+  - name: "Sample Council Waste Portal"
+    url: "https://example.com/recycling-tenders"
+
+google_sheets:
+  spreadsheet_id: ""
+  worksheet_name: "Contracts"
+
+local_cache: ".tmp/contracts_cache.csv"

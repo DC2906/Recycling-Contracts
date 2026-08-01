@@ -1,0 +1,18 @@
+# Environment & Secret files
+.env
+.venv/
+venv/
+ENV/
+
+# Python cache & build outputs
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# IDE & System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.streamlit/
