@@ -172,6 +172,16 @@ def main():
 
     st.dataframe(
         display_df[cols],
+        column_config={
+            "Council Home URL": st.column_config.LinkColumn(
+                "Council Home URL",
+                display_text="🌐 Council Website"
+            ),
+            "Reference / Document URL": st.column_config.LinkColumn(
+                "Reference / Document URL",
+                display_text="📄 View Reference"
+            )
+        },
         use_container_width=True,
         hide_index=True
     )
