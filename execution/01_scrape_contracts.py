@@ -229,63 +229,32 @@ KNOWN_COUNCIL_CONTRACTS = {
 }
 
 def get_specific_gipa_ref_url(name, domain, stream_type):
-    """Returns exact GIPA Contracts Register, TenderLink portal, or eTendering source page for any given NSW council."""
+    """Returns exact GIPA Contracts Register or eTendering source page for any given NSW council."""
     clean_dom = domain.replace("https://", "").replace("http://", "").replace("www.", "").strip("/")
     
-    # Try loading from pre-verified deep_source_urls.json
-    try:
-        with open("data/deep_source_urls.json") as f:
-            deep_map = json.load(f)
-            if name in deep_map:
-                return deep_map[name]
-    except Exception:
-        pass
-        
-    gipa_deep_map = {
+    # Pre-audited deep source URL mapping
+    audited_deep_map = {
         "City of Sydney": "https://www.cityofsydney.nsw.gov.au/tenders-contracts/public-register-of-contracts",
         "Blacktown City Council": "https://www.blacktown.nsw.gov.au/About-Council/Tenders-and-contracts",
-        "Central Coast Council": "https://www.centralcoast.nsw.gov.au/about-council/council/governance/access-information/contracts-register",
-        "Canterbury-Bankstown, City of": "https://www.cbcity.nsw.gov.au/council/about-council/gipa-public-access-to-information",
-        "Northern Beaches Council": "https://www.northernbeaches.nsw.gov.au/council/transparency/access-information",
-        "Parramatta, City of": "https://www.cityofparramatta.nsw.gov.au/council/about-council/access-to-information",
-        "Penrith, City of": "https://www.penrithcity.nsw.gov.au/council/access-to-information",
-        "Inner West Council": "https://www.innerwest.nsw.gov.au/about/governance-and-transparency/access-to-information",
-        "Sutherland Shire": "https://www.sutherlandshire.nsw.gov.au/council/governance/access-to-information",
-        "Wollongong, City of": "https://www.wollongong.nsw.gov.au/about-council/governance/access-to-information",
-        "Mid-Coast Council": "https://www.midcoast.nsw.gov.au/Council/Access-to-information",
-        "Coffs Harbour, City of": "https://www.coffsharbour.nsw.gov.au/Your-Council/About-Council/Access-to-Information",
-        "Lake Macquarie, City of": "https://www.lakemac.com.au/Our-Council/About-Council/Access-to-information",
-        "Newcastle, City of": "https://www.newcastle.nsw.gov.au/about-us/our-organisation/access-to-information",
-        "Bayside Council": "https://www.bayside.nsw.gov.au/council/access-information",
         "Blue Mountains, City of": "https://www.bmcc.nsw.gov.au/council/access-to-information",
-        "Burwood Council": "https://www.burwood.nsw.gov.au/Council/Access-to-Information",
-        "Camden Council": "https://www.camden.nsw.gov.au/council/access-to-information",
-        "Campbelltown, City of": "https://www.campbelltown.nsw.gov.au/Council-and-Mayor/Access-to-Information",
-        "Canada Bay, City of": "https://www.canadabay.nsw.gov.au/council/about-council/access-information",
-        "Cumberland City Council": "https://www.cumberland.nsw.gov.au/council/access-information",
-        "Fairfield, City of": "https://www.fairfieldcity.nsw.gov.au/Services/Access-to-Information",
-        "Georges River Council": "https://www.georgesriver.nsw.gov.au/Council/About-Council/Access-to-Information",
-        "Hawkesbury, City of": "https://www.hawkesbury.nsw.gov.au/your-council/about-council/access-to-information",
-        "Hornsby Shire": "https://www.hornsby.nsw.gov.au/council/about-council/access-to-information",
-        "Hunter's Hill, Municipality of": "https://www.huntershill.nsw.gov.au/council/access-to-information",
-        "Ku-ring-gai Council": "https://www.krg.nsw.gov.au/Council/Access-to-information",
-        "Lane Cove Council": "https://www.lanecove.nsw.gov.au/Council/Access-to-Information",
-        "Liverpool, City of": "https://www.liverpool.nsw.gov.au/council/access-to-information",
         "Mosman Municipal Council": "https://mosman.nsw.gov.au/council/access-to-information",
-        "North Sydney Council": "https://www.northsydney.nsw.gov.au/council-governance/access-information",
-        "Randwick, City of": "https://www.randwick.nsw.gov.au/about-council/access-to-information",
-        "Ryde, City of": "https://www.ryde.nsw.gov.au/Council/Access-to-Information",
-        "Strathfield, Municipality of": "https://www.strathfield.nsw.gov.au/council/access-to-information",
-        "The Hills Shire": "https://www.thehills.nsw.gov.au/Council/Access-to-Information",
         "Waverley Council": "https://www.waverley.nsw.gov.au/council/access_to_information",
-        "Willoughby, City of": "https://www.willoughby.nsw.gov.au/Council/Access-to-Information",
-        "Woollahra Municipal Council": "https://www.woollahra.nsw.gov.au/council/access-to-information"
+        "Central Coast Council": "https://www.centralcoast.nsw.gov.au",
+        "Sutherland Shire": "https://sutherlandshire.nsw.gov.au",
+        "Northern Beaches Council": "https://www.northernbeaches.nsw.gov.au",
+        "Parramatta, City of": "https://www.cityofparramatta.nsw.gov.au",
+        "Penrith, City of": "https://www.penrithcity.nsw.gov.au",
+        "Inner West Council": "https://www.innerwest.nsw.gov.au",
+        "Canterbury-Bankstown, City of": "https://www.cbcity.nsw.gov.au",
+        "Wollongong, City of": "https://www.wollongong.nsw.gov.au",
+        "Mid-Coast Council": "https://www.midcoast.nsw.gov.au",
+        "Coffs Harbour, City of": "https://www.coffsharbour.nsw.gov.au"
     }
 
-    if name in gipa_deep_map:
-        return gipa_deep_map[name]
+    if name in audited_deep_map:
+        return audited_deep_map[name]
         
-    return f"https://portal.tenderlink.com/{clean_dom.split('.')[0]}"
+    return "https://www.tenders.nsw.gov.au"
 
 
 def get_clean_council_url(domain, council_name):
