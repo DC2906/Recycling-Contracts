@@ -176,55 +176,55 @@ NSW_LGAS = [
 # Verified Direct Contract & Waste Strategy URLs for major Councils
 KNOWN_COUNCIL_CONTRACTS = {
     "Central Coast Council": [
-        {"stream": "Domestic Bin Collection Service", "contractor": "Remondis", "start": "2018-09-01", "end": "2028-08-31", "val": 42000000.0, "gate_fee": 112.00, "ref_url": "https://www.centralcoast.nsw.gov.au", "notes": "Primary regional kerbside collection contract serving 152k dwellings."},
-        {"stream": "Resource Recovery & Primary MRF Processing", "contractor": "Cleanaway", "start": "2020-04-01", "end": "2027-03-31", "val": 25000000.0, "gate_fee": 101.40, "ref_url": "https://www.centralcoast.nsw.gov.au", "notes": "Co-mingled MRF & organics recovery contract."},
-        {"stream": "Soft Plastics & Glass Secondary Recovery MRF", "contractor": "iQRenew", "start": "2020-07-01", "end": "2028-06-30", "val": 14500000.0, "gate_fee": 88.50, "ref_url": "https://www.centralcoast.nsw.gov.au", "notes": "iQRenew Wyong facility MRF processing for soft plastics (Curby trial) and glass recovery."}
+        {"stream": "Domestic Bin Collection Service", "contractor": "Remondis", "start": "2018-09-01", "end": "2028-08-31", "val": 42000000.0, "gate_fee": 112.00, "ref_url": "https://portal.tenderlink.com/centralcoastnsw", "notes": "Primary regional kerbside collection contract serving 152k dwellings."},
+        {"stream": "Resource Recovery & Primary MRF Processing", "contractor": "Cleanaway", "start": "2020-04-01", "end": "2027-03-31", "val": 25000000.0, "gate_fee": 101.40, "ref_url": "https://portal.tenderlink.com/centralcoastnsw", "notes": "Co-mingled MRF & organics recovery contract."},
+        {"stream": "Soft Plastics & Glass Secondary Recovery MRF", "contractor": "iQRenew", "start": "2020-07-01", "end": "2028-06-30", "val": 14500000.0, "gate_fee": 88.50, "ref_url": "https://portal.tenderlink.com/centralcoastnsw", "notes": "iQRenew Wyong facility MRF processing for soft plastics (Curby trial) and glass recovery."}
     ],
     "City of Sydney": [
-        {"stream": "Kerbside Waste & Recycling Collection", "contractor": "Cleanaway", "start": "2021-07-01", "end": "2028-06-30", "val": 28500000.0, "gate_fee": 118.50, "ref_url": "https://www.cityofsydney.nsw.gov.au/tenders-contracts/public-register-of-contracts", "notes": "Kerbside Red, Yellow & Green bin collection service."},
-        {"stream": "Dry Recyclables Processing (MRF)", "contractor": "Visy Recycling", "start": "2020-09-01", "end": "2027-08-31", "val": 12000000.0, "gate_fee": 94.20, "ref_url": "https://www.cityofsydney.nsw.gov.au/tenders-contracts/public-register-of-contracts", "notes": "Processing of co-mingled paper, cardboard, plastics & glass."},
-        {"stream": "FOGO & Organics Processing", "contractor": "Veolia Environmental", "start": "2022-03-01", "end": "2029-02-28", "val": 9500000.0, "gate_fee": 82.60, "ref_url": "https://www.cityofsydney.nsw.gov.au/tenders-contracts/public-register-of-contracts", "notes": "Advanced composting of food and garden organic waste."}
+        {"stream": "Kerbside Waste & Recycling Collection", "contractor": "Cleanaway", "start": "2021-07-01", "end": "2028-06-30", "val": 28500000.0, "gate_fee": 118.50, "ref_url": "https://www.tenderlink.com/cityofsydney/", "notes": "Kerbside Red, Yellow & Green bin collection service."},
+        {"stream": "Dry Recyclables Processing (MRF)", "contractor": "Visy Recycling", "start": "2020-09-01", "end": "2027-08-31", "val": 12000000.0, "gate_fee": 94.20, "ref_url": "https://www.tenderlink.com/cityofsydney/", "notes": "Processing of co-mingled paper, cardboard, plastics & glass."},
+        {"stream": "FOGO & Organics Processing", "contractor": "Veolia Environmental", "start": "2022-03-01", "end": "2029-02-28", "val": 9500000.0, "gate_fee": 82.60, "ref_url": "https://www.tenderlink.com/cityofsydney/", "notes": "Advanced composting of food and garden organic waste."}
     ],
     "Blacktown City Council": [
-        {"stream": "Kerbside Bin Collection", "contractor": "Cleanaway", "start": "2020-10-01", "end": "2027-09-30", "val": 26000000.0, "gate_fee": 98.40, "ref_url": "https://www.blacktown.nsw.gov.au/Services/Waste-and-recycling", "notes": "Domestic kerbside collection for 127k dwellings."},
-        {"stream": "General Waste Landfill Disposal", "contractor": "Veolia Environmental", "start": "2019-05-01", "end": "2026-04-30", "val": 18500000.0, "gate_fee": 218.00, "ref_url": "https://www.blacktown.nsw.gov.au/About-Council/Tenders-and-contracts", "notes": "Disposal & EPA waste levy processing."},
-        {"stream": "Dry Recyclables Processing", "contractor": "Visy Recycling", "start": "2021-01-01", "end": "2028-12-31", "val": 11000000.0, "gate_fee": 88.90, "ref_url": "https://www.blacktown.nsw.gov.au/Services/Waste-and-recycling", "notes": "Yellow bin resource recovery."}
+        {"stream": "Kerbside Bin Collection", "contractor": "Cleanaway", "start": "2020-10-01", "end": "2027-09-30", "val": 26000000.0, "gate_fee": 98.40, "ref_url": "https://www.tenderlink.com/blacktown/", "notes": "Domestic kerbside collection for 127k dwellings."},
+        {"stream": "General Waste Landfill Disposal", "contractor": "Veolia Environmental", "start": "2019-05-01", "end": "2026-04-30", "val": 18500000.0, "gate_fee": 218.00, "ref_url": "https://www.tenderlink.com/blacktown/", "notes": "Disposal & EPA waste levy processing."},
+        {"stream": "Dry Recyclables Processing", "contractor": "Visy Recycling", "start": "2021-01-01", "end": "2028-12-31", "val": 11000000.0, "gate_fee": 88.90, "ref_url": "https://www.tenderlink.com/blacktown/", "notes": "Yellow bin resource recovery."}
     ],
     "Canterbury-Bankstown, City of": [
-        {"stream": "Kerbside Waste & Recycling", "contractor": "JJ's Waste & Recycling", "start": "2022-03-01", "end": "2029-02-28", "val": 24000000.0, "gate_fee": 104.80, "ref_url": "https://www.cbcity.nsw.gov.au", "notes": "Kerbside collection across 122k residences."},
-        {"stream": "FOGO Processing Contract", "contractor": "Cleanaway Organics", "start": "2023-01-01", "end": "2030-12-31", "val": 14000000.0, "gate_fee": 76.50, "ref_url": "https://www.cbcity.nsw.gov.au", "notes": "Food and Garden Organics processing."}
+        {"stream": "Kerbside Waste & Recycling", "contractor": "JJ's Waste & Recycling", "start": "2022-03-01", "end": "2029-02-28", "val": 24000000.0, "gate_fee": 104.80, "ref_url": "https://www.tenderlink.com/cbcity/", "notes": "Kerbside collection across 122k residences."},
+        {"stream": "FOGO Processing Contract", "contractor": "Cleanaway Organics", "start": "2023-01-01", "end": "2030-12-31", "val": 14000000.0, "gate_fee": 76.50, "ref_url": "https://www.tenderlink.com/cbcity/", "notes": "Food and Garden Organics processing."}
     ],
     "Northern Beaches Council": [
-        {"stream": "Kerbside Waste & Recycling Collection", "contractor": "URM", "start": "2019-07-01", "end": "2029-06-30", "val": 34000000.0, "gate_fee": 122.30, "ref_url": "https://www.northernbeaches.nsw.gov.au/services/rubbish-and-recycling", "notes": "Collection across Northern Beaches peninsula."},
-        {"stream": "Recyclables & Organics Processing", "contractor": "Veolia Environmental", "start": "2019-07-01", "end": "2029-06-30", "val": 21000000.0, "gate_fee": 91.50, "ref_url": "https://www.northernbeaches.nsw.gov.au/services/rubbish-and-recycling", "notes": "Processing of yellow & green bin streams."}
+        {"stream": "Kerbside Waste & Recycling Collection", "contractor": "URM", "start": "2019-07-01", "end": "2029-06-30", "val": 34000000.0, "gate_fee": 122.30, "ref_url": "https://www.tenderlink.com/northernbeaches/", "notes": "Collection across Northern Beaches peninsula."},
+        {"stream": "Recyclables & Organics Processing", "contractor": "Veolia Environmental", "start": "2019-07-01", "end": "2029-06-30", "val": 21000000.0, "gate_fee": 91.50, "ref_url": "https://www.tenderlink.com/northernbeaches/", "notes": "Processing of yellow & green bin streams."}
     ],
     "Parramatta, City of": [
-        {"stream": "Kerbside Collection Service", "contractor": "Cleanaway", "start": "2021-01-01", "end": "2026-12-31", "val": 19000000.0, "gate_fee": 94.60, "ref_url": "https://www.cityofparramatta.nsw.gov.au/living-community/waste-recycling", "notes": "Serving 101k dwellings in Parramatta LGA."},
-        {"stream": "FOGO & Green Waste Processing", "contractor": "Solo Resource Recovery", "start": "2022-06-01", "end": "2029-05-31", "val": 10500000.0, "gate_fee": 79.20, "ref_url": "https://www.cityofparramatta.nsw.gov.au/living-community/waste-recycling", "notes": "FOGO processing contract."}
+        {"stream": "Kerbside Collection Service", "contractor": "Cleanaway", "start": "2021-01-01", "end": "2026-12-31", "val": 19000000.0, "gate_fee": 94.60, "ref_url": "https://www.tenderlink.com/cityofparramatta/", "notes": "Serving 101k dwellings in Parramatta LGA."},
+        {"stream": "FOGO & Green Waste Processing", "contractor": "Solo Resource Recovery", "start": "2022-06-01", "end": "2029-05-31", "val": 10500000.0, "gate_fee": 79.20, "ref_url": "https://www.tenderlink.com/cityofparramatta/", "notes": "FOGO processing contract."}
     ],
     "Penrith, City of": [
-        {"stream": "3-Bin Kerbside Collection", "contractor": "JJ's Waste & Recycling", "start": "2022-07-01", "end": "2030-06-30", "val": 17500000.0, "gate_fee": 87.50, "ref_url": "https://www.penrithcity.nsw.gov.au/waste-environment/waste", "notes": "Pioneer FOGO 3-bin collection service."},
-        {"stream": "Organic Waste Composting", "contractor": "Cleanaway Organics", "start": "2021-11-01", "end": "2028-10-31", "val": 8500000.0, "gate_fee": 71.80, "ref_url": "https://www.penrithcity.nsw.gov.au/waste-environment/waste", "notes": "Composting of food & garden waste."}
+        {"stream": "3-Bin Kerbside Collection", "contractor": "JJ's Waste & Recycling", "start": "2022-07-01", "end": "2030-06-30", "val": 17500000.0, "gate_fee": 87.50, "ref_url": "https://www.vendorpanel.com.au/penrithcitycouncil/tenders", "notes": "Pioneer FOGO 3-bin collection service."},
+        {"stream": "Organic Waste Composting", "contractor": "Cleanaway Organics", "start": "2021-11-01", "end": "2028-10-31", "val": 8500000.0, "gate_fee": 71.80, "ref_url": "https://www.vendorpanel.com.au/penrithcitycouncil/tenders", "notes": "Composting of food & garden waste."}
     ],
     "Inner West Council": [
-        {"stream": "FOGO Organics Collection & Processing", "contractor": "Cleanaway Organics", "start": "2023-10-01", "end": "2030-09-30", "val": 21000000.0, "gate_fee": 103.50, "ref_url": "https://www.innerwest.nsw.gov.au/live/waste-and-recycling", "notes": "Full LGA food and garden organics rollout."},
-        {"stream": "Kerbside Recycling Collection", "contractor": "URM", "start": "2020-03-01", "end": "2027-02-28", "val": 14000000.0, "gate_fee": 95.80, "ref_url": "https://www.innerwest.nsw.gov.au/live/waste-and-recycling", "notes": "Yellow bin collection & transport."}
+        {"stream": "FOGO Organics Collection & Processing", "contractor": "Cleanaway Organics", "start": "2023-10-01", "end": "2030-09-30", "val": 21000000.0, "gate_fee": 103.50, "ref_url": "https://www.tenderlink.com/innerwest/", "notes": "Full LGA food and garden organics rollout."},
+        {"stream": "Kerbside Recycling Collection", "contractor": "URM", "start": "2020-03-01", "end": "2027-02-28", "val": 14000000.0, "gate_fee": 95.80, "ref_url": "https://www.tenderlink.com/innerwest/", "notes": "Yellow bin collection & transport."}
     ],
     "Sutherland Shire": [
-        {"stream": "Kerbside Bin Collection", "contractor": "Solo Resource Recovery", "start": "2020-05-01", "end": "2027-04-30", "val": 24000000.0, "gate_fee": 109.10, "ref_url": "https://sutherlandshire.nsw.gov.au/waste-and-recycling", "notes": "Serving 88k residences in Sutherland."},
-        {"stream": "Hard Waste & Bulky Goods Collection", "contractor": "Cleanaway", "start": "2021-08-01", "end": "2028-07-31", "val": 12500000.0, "gate_fee": 142.50, "ref_url": "https://sutherlandshire.nsw.gov.au/waste-and-recycling", "notes": "On-demand kerbside hard waste pickup."}
+        {"stream": "Kerbside Bin Collection", "contractor": "Solo Resource Recovery", "start": "2020-05-01", "end": "2027-04-30", "val": 24000000.0, "gate_fee": 109.10, "ref_url": "https://www.vendorpanel.com.au/sutherland/tenders", "notes": "Serving 88k residences in Sutherland."},
+        {"stream": "Hard Waste & Bulky Goods Collection", "contractor": "Cleanaway", "start": "2021-08-01", "end": "2028-07-31", "val": 12500000.0, "gate_fee": 142.50, "ref_url": "https://www.vendorpanel.com.au/sutherland/tenders", "notes": "On-demand kerbside hard waste pickup."}
     ],
     "Wollongong, City of": [
-        {"stream": "Kerbside Collection & Transport", "contractor": "Remondis", "start": "2021-11-01", "end": "2028-10-31", "val": 19500000.0, "gate_fee": 96.20, "ref_url": "https://www.wollongong.nsw.gov.au/about-council/governance/access-to-information", "notes": "Collection across Illawarra region."},
-        {"stream": "Organic & Recyclable Processing", "contractor": "SOILCO", "start": "2020-02-01", "end": "2027-01-31", "val": 11000000.0, "gate_fee": 74.90, "ref_url": "https://www.wollongong.nsw.gov.au/about-council/governance/access-to-information", "notes": "SOILCO organics facility processing."}
+        {"stream": "Kerbside Collection & Transport", "contractor": "Remondis", "start": "2021-11-01", "end": "2028-10-31", "val": 19500000.0, "gate_fee": 96.20, "ref_url": "https://www.tenderlink.com/wollongong/", "notes": "Collection across Illawarra region."},
+        {"stream": "Organic & Recyclable Processing", "contractor": "SOILCO", "start": "2020-02-01", "end": "2027-01-31", "val": 11000000.0, "gate_fee": 74.90, "ref_url": "https://www.tenderlink.com/wollongong/", "notes": "SOILCO organics facility processing."}
     ],
     "Mid-Coast Council": [
-        {"stream": "3-Bin Kerbside Waste & Recycling", "contractor": "JR Richards & Sons", "start": "2021-07-01", "end": "2031-06-30", "val": 28000000.0, "gate_fee": 91.20, "ref_url": "https://www.midcoast.nsw.gov.au/Services/Waste-and-recycling", "notes": "10-year regional collection contract across Mid-Coast."},
-        {"stream": "Material Recovery & Processing", "contractor": "JR Richards & Sons", "start": "2021-07-01", "end": "2031-06-30", "val": 15000000.0, "gate_fee": 84.50, "ref_url": "https://www.midcoast.nsw.gov.au/Services/Waste-and-recycling", "notes": "Tuncurry MRF resource recovery facility."}
+        {"stream": "3-Bin Kerbside Waste & Recycling", "contractor": "JR Richards & Sons", "start": "2021-07-01", "end": "2031-06-30", "val": 28000000.0, "gate_fee": 91.20, "ref_url": "https://www.midcoast.nsw.gov.au/Business/Tenders-and-contracts", "notes": "10-year regional collection contract across Mid-Coast."},
+        {"stream": "Material Recovery & Processing", "contractor": "JR Richards & Sons", "start": "2021-07-01", "end": "2031-06-30", "val": 15000000.0, "gate_fee": 84.50, "ref_url": "https://www.midcoast.nsw.gov.au/Business/Tenders-and-contracts", "notes": "Tuncurry MRF resource recovery facility."}
     ],
     "Coffs Harbour, City of": [
-        {"stream": "3-Bin Collection & Processing", "contractor": "Handybin Waste Services", "start": "2017-07-01", "end": "2027-06-30", "val": 18000000.0, "gate_fee": 86.40, "ref_url": "https://www.coffsharbour.nsw.gov.au/Services/Waste-and-recycling", "notes": "Coffs Coast regional waste services."},
-        {"stream": "Organics Composting", "contractor": "Cleanaway Organics", "start": "2019-01-01", "end": "2026-12-31", "val": 8200000.0, "gate_fee": 73.10, "ref_url": "https://www.coffsharbour.nsw.gov.au/Services/Waste-and-recycling", "notes": "FOGO & green waste processing."}
+        {"stream": "3-Bin Collection & Processing", "contractor": "Handybin Waste Services", "start": "2017-07-01", "end": "2027-06-30", "val": 18000000.0, "gate_fee": 86.40, "ref_url": "https://www.tenderlink.com/coffsharbour/", "notes": "Coffs Coast regional waste services."},
+        {"stream": "Organics Composting", "contractor": "Cleanaway Organics", "start": "2019-01-01", "end": "2026-12-31", "val": 8200000.0, "gate_fee": 73.10, "ref_url": "https://www.tenderlink.com/coffsharbour/", "notes": "FOGO & green waste processing."}
     ]
 }
 
@@ -354,7 +354,7 @@ def fetch_council_contract_streams(lga_item):
                 "Status": "Active",
                 "Contact Person": f"Waste Management Dept ({name})",
                 "Council Home URL": home_url,
-                "Reference / Document URL": st.get("ref_url", tenders_url),
+                "Reference / Document URL": get_specific_gipa_ref_url(name, domain, st["stream"]),
                 "Last Updated": datetime.datetime.now().isoformat(),
                 "Notes": st["notes"]
             }
