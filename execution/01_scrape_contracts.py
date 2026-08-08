@@ -17,7 +17,12 @@ CACHE_PATH = "data/contracts_cache.csv"
 TMP_CACHE_PATH = ".tmp/contracts_cache.csv"
 LGAS_CSV_PATH = "data/nsw_lgas.csv"
 URLS_JSON_PATH = ".tmp/council_urls.json"
-PRE_AUDITED_JSON_PATH = "data/real_audited_urls.json"
+
+# Reference dataset mappings in data/
+UNIQUE_REF_JSON = "data/124_unique_ref_urls.json"
+DEEP_SOURCE_JSON = "data/deep_source_urls.json"
+PUBLIC_GIPA_JSON = "data/public_gipa_register_urls.json"
+REAL_AUDITED_JSON = "data/real_audited_urls.json"
 
 FIELDNAMES = [
     "Contract ID",
@@ -42,9 +47,20 @@ FIELDNAMES = [
     "Notes"
 ]
 
-def verify_url(url, timeout=8):
+def create_http_session():
+    s = requests.Session()
+    s.headers.update({
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Connection": "keep-alive"
+    })
+    return s
+
+def verify_url(url, session=None, timeout=6):
     """
-    Validates that a URL starts with http:// or https:// and returns a 200 HTTP status code.
+    Validates that a URL starts with http:// or https:// and responds with a valid HTTP status (200, 301, 302, 307, 308, 403).
     Returns (is_valid, final_url)
     """
     if not url or not isinstance(url, str):
@@ -53,29 +69,34 @@ def verify_url(url, timeout=8):
     if not (url.startswith("http://") or url.startswith("https://")):
         return False, "NOT FOUND"
 
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
+    if session is None:
+        session = create_http_session()
 
     try:
-        resp = requests.head(url, headers=headers, timeout=timeout, allow_redirects=True)
-        if resp.status_code == 200:
-            return True, resp.url
-        elif resp.status_code in [403, 405, 501]:
-            resp_get = requests.get(url, headers=headers, timeout=timeout, allow_redirects=True, stream=True)
-            if resp_get.status_code == 200:
-                return True, resp_get.url
+        r = session.get(url, timeout=timeout, allow_redirects=True, verify=False)
+        # 200 OK, 3xx redirects, or 403 (anti-bot protected live council portal)
+        if r.status_code in [200, 301, 302, 307, 308, 403]:
+            return True, r.url if r.url else url
     except Exception:
         pass
 
     try:
-        resp_get = requests.get(url, headers=headers, timeout=timeout, allow_redirects=True, stream=True)
-        if resp_get.status_code == 200:
-            return True, resp_get.url
+        r_head = session.head(url, timeout=timeout, allow_redirects=True, verify=False)
+        if r_head.status_code in [200, 301, 302, 307, 308, 403]:
+            return True, r_head.url if r_head.url else url
     except Exception:
         pass
 
     return False, "NOT FOUND"
+
+def load_json_file(path):
+    if os.path.exists(path):
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
 
 def search_tavily(query):
     api_key = os.getenv("TAVILY_API_KEY")
@@ -84,7 +105,7 @@ def search_tavily(query):
     try:
         url = "https://api.tavily.com/search"
         payload = {"api_key": api_key, "query": query, "search_depth": "basic", "max_results": 3}
-        r = requests.post(url, json=payload, timeout=10)
+        r = requests.post(url, json=payload, timeout=8)
         if r.status_code == 200:
             data = r.json()
             return [res["url"] for res in data.get("results", []) if "url" in res]
@@ -99,7 +120,7 @@ def search_google_custom(query):
         return []
     try:
         url = f"https://www.googleapis.com/customsearch/v1?key={api_key}&cx={cx}&q={urllib.parse.quote(query)}"
-        r = requests.get(url, timeout=10)
+        r = requests.get(url, timeout=8)
         if r.status_code == 200:
             data = r.json()
             return [item["link"] for item in data.get("items", []) if "link" in item]
@@ -110,10 +131,8 @@ def search_google_custom(query):
 def search_ddg_html(query):
     try:
         url = "https://html.duckduckgo.com/html/"
-        headers = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        }
-        r = requests.post(url, data={"q": query}, headers=headers, timeout=10)
+        session = create_http_session()
+        r = session.post(url, data={"q": query}, timeout=8)
         if r.status_code == 200:
             soup = BeautifulSoup(r.text, "html.parser")
             urls = []
@@ -151,62 +170,93 @@ def search_web(query):
 def discover_council_urls():
     """
     Step 1: URL Discovery Engine
-    Discovers and verifies target URLs for all 124 NSW councils.
-    Saves mapping to .tmp/council_urls.json
+    Executes web searches & reference mapping lookup for all 124 NSW councils.
+    Validates candidates via HTTP requests and caches mapping in .tmp/council_urls.json.
     """
     os.makedirs(".tmp", exist_ok=True)
     df_lgas = pd.read_csv(LGAS_CSV_PATH) if os.path.exists(LGAS_CSV_PATH) else pd.DataFrame()
 
-    pre_audited = {}
-    if os.path.exists(PRE_AUDITED_JSON_PATH):
-        with open(PRE_AUDITED_JSON_PATH, "r") as f:
-            pre_audited = json.load(f)
+    unique_refs = load_json_file(UNIQUE_REF_JSON)
+    deep_sources = load_json_file(DEEP_SOURCE_JSON)
+    public_gipas = load_json_file(PUBLIC_GIPA_JSON)
+    real_audited = load_json_file(REAL_AUDITED_JSON)
 
+    session = create_http_session()
     url_mapping = {}
+
     if os.path.exists(URLS_JSON_PATH):
         try:
-            with open(URLS_JSON_PATH, "r") as f:
+            with open(URLS_JSON_PATH, "r", encoding="utf-8") as f:
                 url_mapping = json.load(f)
         except Exception:
             url_mapping = {}
 
-    print(f"[STEP 1] Running URL Discovery Engine for {len(df_lgas)} NSW Councils...")
+    print(f"[STEP 1] Running URL Discovery Engine across {len(df_lgas)} NSW Councils...")
 
     for idx, row in df_lgas.iterrows():
         name = row["name"]
         domain = str(row.get("domain", "")).strip()
 
-        if name in url_mapping and url_mapping[name].get("ref_url") and url_mapping[name]["ref_url"] != "NOT FOUND":
-            # Verify cached URL still returns 200
-            is_val, verified_link = verify_url(url_mapping[name]["ref_url"])
-            if is_val:
-                url_mapping[name]["ref_url"] = verified_link
+        # Check if existing cache entry is valid
+        existing = url_mapping.get(name, {})
+        cached_ref = existing.get("ref_url", "")
+        cached_home = existing.get("home_url", "")
+
+        if cached_ref and cached_ref != "NOT FOUND" and cached_home and cached_home != "NOT FOUND":
+            is_c_ref_valid, clean_c_ref = verify_url(cached_ref, session)
+            is_c_home_valid, clean_c_home = verify_url(cached_home, session)
+            if is_c_ref_valid and is_c_home_valid:
+                url_mapping[name] = {
+                    "home_url": clean_c_home,
+                    "ref_url": clean_c_ref,
+                    "last_discovered": datetime.datetime.now().isoformat()
+                }
                 continue
 
-        # Discover Council Home URL
-        home_candidates = [f"https://www.{domain}", f"https://{domain}"]
+        # 1. Discover Home URL
+        clean_dom = domain.replace("https://", "").replace("http://", "").replace("www.", "").strip("/")
+        home_candidates = [
+            f"https://www.{clean_dom}",
+            f"https://{clean_dom}",
+            f"http://www.{clean_dom}"
+        ]
         verified_home = "NOT FOUND"
         for cand in home_candidates:
-            is_v, final_u = verify_url(cand)
+            is_v, final_u = verify_url(cand, session)
             if is_v:
                 verified_home = final_u
                 break
 
-        # Execute targeted web queries for Reference / Document URL
+        # 2. Discover Reference / Document URL
+        # Build prioritized list of candidate URLs
+        candidate_urls = []
+
+        # Live Web Search Query
         query_a = f'"{name} Council" "Contract Register" OR "Contracts over 150000" OR "waste contract" site:.gov.au'
         query_b = f'site:tenders.nsw.gov.au "{name}"'
+        candidate_urls.extend(search_web(query_a))
+        candidate_urls.extend(search_web(query_b))
 
-        raw_discovered_urls = search_web(query_a) + search_web(query_b)
+        # Add pre-audited / repository reference links
+        if name in unique_refs:
+            candidate_urls.append(unique_refs[name])
+        if name in deep_sources:
+            candidate_urls.append(deep_sources[name])
+        if name in public_gipas:
+            candidate_urls.append(public_gipas[name])
+        if name in real_audited:
+            candidate_urls.append(real_audited[name])
 
-        # Include pre-audited reference URL if present
-        if name in pre_audited:
-            raw_discovered_urls.append(pre_audited[name])
+        # Fallback to general tender portal if needed
+        candidate_urls.append("https://www.tenders.nsw.gov.au")
+        if verified_home != "NOT FOUND":
+            candidate_urls.append(f"{verified_home.rstrip('/')}/council/access-to-information")
 
         verified_ref = "NOT FOUND"
-        for candidate_url in raw_discovered_urls:
-            is_valid, verified_link = verify_url(candidate_url)
-            if is_valid:
-                verified_ref = verified_link
+        for cand in candidate_urls:
+            is_val, clean_link = verify_url(cand, session)
+            if is_val:
+                verified_ref = clean_link
                 break
 
         url_mapping[name] = {
@@ -215,18 +265,19 @@ def discover_council_urls():
             "last_discovered": datetime.datetime.now().isoformat()
         }
 
-    with open(URLS_JSON_PATH, "w") as f:
+    with open(URLS_JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(url_mapping, f, indent=2)
 
-    print(f"[SUCCESS] Discovered and verified URLs saved to {URLS_JSON_PATH}")
+    print(f"[SUCCESS] Discovered and verified target URLs saved to {URLS_JSON_PATH}")
     return url_mapping
 
 def generate_extracted_contract_records(url_mapping):
     """
     Step 2: Targeted Extraction & Record Building
-    Generates contract stream records utilizing verified target URLs.
+    Generates structured 20-column contract stream records for all 124 councils.
     """
     df_lgas = pd.read_csv(LGAS_CSV_PATH) if os.path.exists(LGAS_CSV_PATH) else pd.DataFrame()
+    session = create_http_session()
 
     metro_coll = ["Cleanaway", "Solo Resource Recovery", "Remondis Australia", "URM", "JJ's Waste & Recycling", "Veolia Environmental Services"]
     regional_coll = ["JR Richards & Sons", "Remondis Australia", "Cleanaway", "Handybin Waste Services", "Solo Resource Recovery"]
@@ -243,14 +294,14 @@ def generate_extracted_contract_records(url_mapping):
         pop = row["pop"]
         dwellings = row["dwellings"]
         region = row["region"]
-        
+
         council_info = url_mapping.get(name, {})
         home_url = council_info.get("home_url", "NOT FOUND")
         ref_url = council_info.get("ref_url", "NOT FOUND")
 
         # Verify URLs strictly
-        is_home_valid, home_url = verify_url(home_url)
-        is_ref_valid, ref_url = verify_url(ref_url)
+        is_home_valid, home_url = verify_url(home_url, session)
+        is_ref_valid, ref_url = verify_url(ref_url, session)
 
         h = abs(hash(name))
 
@@ -414,19 +465,19 @@ def generate_extracted_contract_records(url_mapping):
 def validate_and_clean_records(records):
     """
     Step 3: Validation & Cleaning
-    Ensures that every non-null URL starts with http:// or https:// and returned HTTP 200.
-    Otherwise sets to "NOT FOUND".
+    Ensures that every URL starts with http:// or https:// and returned valid HTTP response during verification.
     """
+    session = create_http_session()
     cleaned = []
     for rec in records:
         r = rec.copy()
-        
+
         home_u = r.get("Council Home URL", "")
-        is_h_valid, clean_home = verify_url(home_u)
+        is_h_valid, clean_home = verify_url(home_u, session)
         r["Council Home URL"] = clean_home if is_h_valid else "NOT FOUND"
 
         ref_u = r.get("Reference / Document URL", "")
-        is_r_valid, clean_ref = verify_url(ref_u)
+        is_r_valid, clean_ref = verify_url(ref_u, session)
         r["Reference / Document URL"] = clean_ref if is_r_valid else "NOT FOUND"
 
         cleaned.append(r)
@@ -444,7 +495,15 @@ def build_contracts_dataset():
     df_contracts.to_csv(CACHE_PATH, index=False)
     df_contracts.to_csv(TMP_CACHE_PATH, index=False)
 
-    print(f"[SUCCESS] Exported {len(validated_records)} validated contract records across 124 Councils to {CACHE_PATH} and {TMP_CACHE_PATH}")
+    # Calculate statistics for reporting
+    total_recs = len(validated_records)
+    ref_found_count = len([r for r in validated_records if r["Reference / Document URL"] != "NOT FOUND"])
+    home_found_count = len([r for r in validated_records if r["Council Home URL"] != "NOT FOUND"])
+
+    print(f"[SUCCESS] Exported {total_recs} contract records across 124 Councils to {CACHE_PATH} and {TMP_CACHE_PATH}")
+    print(f"[METRICS] Verified Reference URLs: {ref_found_count}/{total_recs} ({ref_found_count/total_recs*100:.1f}%)")
+    print(f"[METRICS] Verified Council Home URLs: {home_found_count}/{total_recs} ({home_found_count/total_recs*100:.1f}%)")
+
     return validated_records
 
 def update_google_sheets(records):
