@@ -1,0 +1,622 @@
+{
+  "Albury, City of": {
+    "home_url": "https://www.alburycity.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:38:23.093150"
+  },
+  "Armidale Regional Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:38:28.419363"
+  },
+  "Balranald Shire": {
+    "home_url": "https://balranald.nsw.gov.au/",
+    "ref_url": "https://buy.nsw.gov.au",
+    "last_discovered": "2026-08-08T12:38:31.449665"
+  },
+  "Bathurst Region": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:38:34.455891"
+  },
+  "Berrigan Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "https://buy.nsw.gov.au",
+    "last_discovered": "2026-08-08T12:38:37.208086"
+  },
+  "Bland Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "https://buy.nsw.gov.au",
+    "last_discovered": "2026-08-08T12:38:40.483293"
+  },
+  "Blayney Shire": {
+    "home_url": "https://www.blayney.nsw.gov.au/",
+    "ref_url": "https://buy.nsw.gov.au",
+    "last_discovered": "2026-08-08T12:38:42.229237"
+  },
+  "Bogan Shire": {
+    "home_url": "https://bogan.nsw.gov.au/",
+    "ref_url": "https://buy.nsw.gov.au",
+    "last_discovered": "2026-08-08T12:38:43.718973"
+  },
+  "Bourke Shire": {
+    "home_url": "https://bourke.nsw.gov.au/",
+    "ref_url": "https://buy.nsw.gov.au",
+    "last_discovered": "2026-08-08T12:38:51.065051"
+  },
+  "Brewarrina Shire": {
+    "home_url": "https://brewarrina.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:38:54.260001"
+  },
+  "Broken Hill, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:38:57.628375"
+  },
+  "Cabonne Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:00.941915"
+  },
+  "Carrathool Shire": {
+    "home_url": "https://carrathool.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:03.387146"
+  },
+  "Central Darling Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:06.512318"
+  },
+  "Cobar Shire": {
+    "home_url": "https://www.cobar.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:07.876333"
+  },
+  "Coolamon Shire": {
+    "home_url": "https://coolamon.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:10.494409"
+  },
+  "Coonamble Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:11.587533"
+  },
+  "Cootamundra-Gundagai Regional": {
+    "home_url": "https://www.cgrc.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:13.355429"
+  },
+  "Cowra Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:16.640614"
+  },
+  "Dubbo Regional Council": {
+    "home_url": "https://www.dubbo.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:18.055097"
+  },
+  "Edward River Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:21.741700"
+  },
+  "Federation Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:24.959100"
+  },
+  "Forbes Shire": {
+    "home_url": "https://www.forbes.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:26.337360"
+  },
+  "Glen Innes Severn Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:30.005490"
+  },
+  "Goulburn Mulwaree Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:33.121382"
+  },
+  "Greater Hume Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:37.008912"
+  },
+  "Griffith, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:40.885615"
+  },
+  "Gunnedah Shire": {
+    "home_url": "https://www.gunnedah.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:44.030267"
+  },
+  "Gwydir Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:48.550563"
+  },
+  "Hay Shire": {
+    "home_url": "https://www.hay.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:51.258121"
+  },
+  "Hilltops Council": {
+    "home_url": "https://www.hilltops.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:53.856634"
+  },
+  "Inverell Shire": {
+    "home_url": "https://inverell.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:39:58.088477"
+  },
+  "Jerilderie (Murrumbidgee)": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:40:02.816670"
+  },
+  "Junee Shire": {
+    "home_url": "https://www.junee.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:40:05.243772"
+  },
+  "Lachlan Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:40:09.717733"
+  },
+  "Leeton Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:40:14.422487"
+  },
+  "Liverpool Plains Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:40:20.557506"
+  },
+  "Lockhart Shire": {
+    "home_url": "https://lockhart.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:40:26.459369"
+  },
+  "Moree Plains Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:40:29.565752"
+  },
+  "Murray River Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:40:34.132618"
+  },
+  "Muswellbrook Shire": {
+    "home_url": "https://www.muswellbrook.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:40:35.994188"
+  },
+  "Narrabri Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:40:59.360634"
+  },
+  "Narrandera Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:41:22.083326"
+  },
+  "Narromine Shire": {
+    "home_url": "https://www.narromine.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:41:45.177609"
+  },
+  "Oberon Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:42:08.001241"
+  },
+  "Orange, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:42:30.803817"
+  },
+  "Parkes Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:42:54.030826"
+  },
+  "Queanbeyan-Palerang Regional": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:43:16.916700"
+  },
+  "Snowy Monaro Regional Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:43:40.267579"
+  },
+  "Snowy Valleys Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "https://buy.nsw.gov.au",
+    "last_discovered": "2026-08-08T12:44:02.936146"
+  },
+  "Southern Highlands (Wingecarribee)": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:44:25.585928"
+  },
+  "Tamworth Regional Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:44:47.883557"
+  },
+  "Tenterfield Shire": {
+    "home_url": "https://www.tenterfield.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:45:11.246417"
+  },
+  "Temora Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:45:34.371377"
+  },
+  "Upper Lachlan Shire": {
+    "home_url": "https://upperlachlan.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:45:55.720948"
+  },
+  "Uralla Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:46:18.960961"
+  },
+  "Wagga Wagga, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:46:42.649928"
+  },
+  "Walcha Council": {
+    "home_url": "https://walcha.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:47:11.390697"
+  },
+  "Walgett Shire": {
+    "home_url": "https://www.walgett.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:47:32.496529"
+  },
+  "Warren Shire": {
+    "home_url": "https://www.warren.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:47:54.061984"
+  },
+  "Warrumbungle Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:48:17.000735"
+  },
+  "Weddin Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:48:40.293571"
+  },
+  "Wentworth Shire": {
+    "home_url": "https://www.wentworth.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:49:02.337715"
+  },
+  "Yass Valley Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "https://buy.nsw.gov.au",
+    "last_discovered": "2026-08-08T12:49:24.814391"
+  },
+  "Ballina Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:49:48.139368"
+  },
+  "Bega Valley Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:50:12.001478"
+  },
+  "Bellingen Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:50:35.543449"
+  },
+  "Byron Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:50:58.732346"
+  },
+  "Clarence Valley Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:51:22.606898"
+  },
+  "Coffs Harbour, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:51:45.577326"
+  },
+  "Eurobodalla Shire": {
+    "home_url": "https://www.esc.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:52:07.054717"
+  },
+  "Kempsey Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:52:29.800062"
+  },
+  "Kyogle Council": {
+    "home_url": "https://www.kyogle.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:52:51.594773"
+  },
+  "Lismore, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:53:14.992554"
+  },
+  "Mid-Coast Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:53:37.594071"
+  },
+  "Nambucca Valley Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:54:01.148617"
+  },
+  "Port Macquarie-Hastings Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:54:24.120315"
+  },
+  "Richmond Valley Council": {
+    "home_url": "https://richmondvalley.nsw.gov.au/",
+    "ref_url": "https://buy.nsw.gov.au",
+    "last_discovered": "2026-08-08T12:54:46.319505"
+  },
+  "Tweed Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:55:08.928039"
+  },
+  "Central Coast Council": {
+    "home_url": "https://www.centralcoast.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:55:30.936629"
+  },
+  "Cessnock, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:55:53.840871"
+  },
+  "Dungog Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:56:17.029347"
+  },
+  "Kiama, Municipality of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:56:39.961064"
+  },
+  "Lake Macquarie, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:57:02.736839"
+  },
+  "Maitland, City of": {
+    "home_url": "https://www.maitland.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:57:24.762037"
+  },
+  "Newcastle, City of": {
+    "home_url": "https://newcastle.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:57:46.270487"
+  },
+  "Port Stephens Council": {
+    "home_url": "https://www.portstephens.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:58:08.454787"
+  },
+  "Shellharbour, City of": {
+    "home_url": "https://www.shellharbour.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:58:29.780548"
+  },
+  "Shoalhaven, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:58:52.796057"
+  },
+  "Singleton Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:59:16.096914"
+  },
+  "Upper Hunter Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T12:59:39.109562"
+  },
+  "Wollongong, City of": {
+    "home_url": "https://www.wollongong.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:00:00.583084"
+  },
+  "Bayside Council": {
+    "home_url": "https://www.bayside.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:00:21.394829"
+  },
+  "Blacktown City Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:00:44.621316"
+  },
+  "Blue Mountains, City of": {
+    "home_url": "https://www.bmcc.nsw.gov.au/",
+    "ref_url": "https://www.bmcc.nsw.gov.au/council/access-to-information",
+    "last_discovered": "2026-08-08T13:01:05.209797"
+  },
+  "Burwood Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:01:28.337692"
+  },
+  "Camden Council": {
+    "home_url": "https://www.camden.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:01:49.703298"
+  },
+  "Campbelltown, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:02:12.716412"
+  },
+  "Canada Bay, City of": {
+    "home_url": "https://www.canadabay.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:02:33.532448"
+  },
+  "Canterbury-Bankstown, City of": {
+    "home_url": "https://www.cbcity.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:02:54.548833"
+  },
+  "Cumberland City Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:03:16.825143"
+  },
+  "Fairfield, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:03:39.677315"
+  },
+  "Georges River Council": {
+    "home_url": "https://www.georgesriver.nsw.gov.au/Home",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:04:00.415958"
+  },
+  "Hawkesbury, City of": {
+    "home_url": "https://www.hawkesbury.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:04:22.607597"
+  },
+  "Hornsby Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:04:45.699791"
+  },
+  "Hunter's Hill, Municipality of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:05:09.011763"
+  },
+  "Inner West Council": {
+    "home_url": "https://www.innerwest.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:05:30.040762"
+  },
+  "Ku-ring-gai Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:05:53.376880"
+  },
+  "Lane Cove Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:06:16.887783"
+  },
+  "Liverpool, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:06:39.698410"
+  },
+  "Mosman Municipal Council": {
+    "home_url": "https://mosman.nsw.gov.au/",
+    "ref_url": "https://mosman.nsw.gov.au/council/council-information/access-council-information",
+    "last_discovered": "2026-08-08T13:07:01.763767"
+  },
+  "North Sydney Council": {
+    "home_url": "https://www.northsydney.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:07:22.821023"
+  },
+  "Northern Beaches Council": {
+    "home_url": "https://www.northernbeaches.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:07:43.961853"
+  },
+  "Parramatta, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:08:06.615036"
+  },
+  "Penrith, City of": {
+    "home_url": "https://www.penrithcity.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:08:28.879895"
+  },
+  "Randwick, City of": {
+    "home_url": "https://www.randwick.nsw.gov.au/",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:08:51.381249"
+  },
+  "Ryde, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:09:14.482101"
+  },
+  "Strathfield, Municipality of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:09:37.706462"
+  },
+  "Sutherland Shire": {
+    "home_url": "https://www.sutherlandshire.nsw.gov.au",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:10:00.872944"
+  },
+  "Sydney, City of": {
+    "home_url": "https://www.cityofsydney.nsw.gov.au/",
+    "ref_url": "https://buy.nsw.gov.au",
+    "last_discovered": "2026-08-08T13:10:21.782012"
+  },
+  "The Hills Shire": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:10:44.581887"
+  },
+  "Waverley Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "https://www.waverley.nsw.gov.au/council/access_to_information",
+    "last_discovered": "2026-08-08T13:11:06.535754"
+  },
+  "Willoughby, City of": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:11:29.766934"
+  },
+  "Woollahra Municipal Council": {
+    "home_url": "NOT FOUND",
+    "ref_url": "NOT FOUND",
+    "last_discovered": "2026-08-08T13:11:53.189064"
+  }
+}
